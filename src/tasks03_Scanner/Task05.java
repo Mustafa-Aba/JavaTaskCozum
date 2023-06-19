@@ -20,7 +20,7 @@ public class Task05 {
         add=num1+num2;
         subs=num1-num2;
         multiply=num1*num2;
-        divide=1.0*num1/num2;
+        divide=(double) num1/num2;
 
         System.out.println("num1 + num2 = " + add);
         System.out.println("num1 - num2 = " + subs);

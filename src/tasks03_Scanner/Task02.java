@@ -22,7 +22,7 @@ public class Task02 {
         Scanner input=new Scanner(System.in);
         System.out.println("Enter your height as cm:");
         double height=input.nextDouble();
-        float by= input.nextFloat();
+
         System.out.println("Enter your weight as kg");
         double weight=input.nextInt();
 

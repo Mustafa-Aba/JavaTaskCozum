@@ -12,6 +12,7 @@ public class Task09 {
     Beklenen çıktı:
      7200
     */
-
+        Task03.hourToSecond();
     }
+
 }

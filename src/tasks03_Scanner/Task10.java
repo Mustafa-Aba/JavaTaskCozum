@@ -13,7 +13,7 @@ public class Task10 {
         Scanner input= new Scanner(System.in);
         System.out.print("Fahrenheit degree : ");
         double fDegree=input.nextDouble();
-        double cDegree=(fDegree-32)*5.0/9;
+        double cDegree=(fDegree-32)*5/9;
         System.out.println("Celsius Degree = " + cDegree);
 
 

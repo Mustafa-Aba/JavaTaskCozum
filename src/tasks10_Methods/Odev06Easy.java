@@ -1,9 +1,11 @@
 package tasks10_Methods;
 
+import java.util.Scanner;
+
 public class Odev06Easy {
 
     /*
-    powerOfThree isminde bir method oluşturun.
+    powerOfThree isminde bir method oluşturun.  // boolean powerOfThree(int )
         Parametre olarak int
         Return tipi boolean
         Bir tamsayı verildiğinde, 3 üssü olup olmadığını teyit edin.
@@ -32,12 +34,39 @@ public class Odev06Easy {
      */
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Bir sayı giriniz: ");
+        int sayi = input.nextInt();
 
-
-
-
+        System.out.println(powerOfThree(sayi) ? sayi + " sayısı, 3 ' ün kuvvetidir." : sayi + " sayısı, 3 ' ün kuvveti değildir.");
+        System.out.println(secondMethod(sayi));
     }
 
 
+
+
+    private static boolean powerOfThree(int num) {
+        boolean isPower=false;
+
+        for (int i = 1; i <= num; i*=3) {
+            if (num==i) {
+                isPower=true;
+                break;
+            }
+        }return isPower;
+
+
+    }
+    //2.yol
+    private static boolean  secondMethod(int num) {
+        boolean bb=false;
+        for (int i = 0; i < Math.sqrt(num); i++) {
+            if (Math.pow(3,i)==num) {
+                bb=true;
+                break;
+            }
+        }
+        return bb;
+    }
 
 }

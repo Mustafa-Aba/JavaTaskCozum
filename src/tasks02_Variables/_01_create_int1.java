@@ -10,6 +10,9 @@ public class _01_create_int1 {
 
         //Kodu aşağıya yazınız.
 
+        int sayi=100;
+        System.out.println(sayi);
+        System.out.println("sayi = " + sayi);
 
 
 
