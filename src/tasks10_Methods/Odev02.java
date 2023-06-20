@@ -18,17 +18,7 @@ public class Odev02 {
 
         rakamSay(str);
 
-        System.out.println("Girilen ifadede " + rakamSay2(str) + " adet rakam vardır.");
-    }
-
-    private static int rakamSay2(String str) {
-        int sayac = 0;
-        for (int i = 0; i < str.length(); i++) {
-            if (String.valueOf(str.charAt(i)).matches("[0-9]")) {//str.substring(i,i+1)
-                sayac++;
-            }
-        }
-        return sayac;
+        System.out.println("2.Method: Girilen ifadede " + rakamSay2(str) + " adet rakam vardır.");
     }
 
     private static void rakamSay(String s) {
@@ -39,5 +29,14 @@ public class Odev02 {
             }
         }
         System.out.println("Girilen ifadede " + sayac + " adet rakam vardır.");
+    }
+    private static int rakamSay2(String str) {
+        int sayac = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (String.valueOf(str.charAt(i)).matches("[0-9]")) {//str.substring(i,i+1)
+                sayac++;
+            }
+        }
+        return sayac;
     }
 }

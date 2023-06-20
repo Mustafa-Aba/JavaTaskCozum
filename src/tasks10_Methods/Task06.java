@@ -42,8 +42,29 @@ public class Task06 {
     private static void ucgen(int a, int b) {
         System.out.print("Üçüncü kenarı giriniz: ");
         int c = sc.nextInt();
-        System.out.println("Üçgenin çevresi= " + (a + b + c));
-        System.out.println("Üçgenin alanı= " + (a * b) / 2);
+        if (ucgenKontrolu(a, b, c)) {
+            System.out.println("Üçgenin çevresi= " + (a + b + c));
+            System.out.println("Üçgenin alanı= " + ucgenAlanHesapla(a,b,c) );
+        } else
+            System.out.println("Girilen kenar ölçüleri üçgen oluşturmaz!");
+
+
+    }
+
+    private static boolean ucgenKontrolu(int kenar1, int kenar2, int kenar3) {
+        if (kenar1 <= 0 || kenar2 <= 0 || kenar3 <= 0) {
+            return false;
+        }
+        if (kenar1 + kenar2 > kenar3 && kenar2 + kenar3 > kenar1 && kenar1 + kenar3 > kenar2) {
+            return true;
+        }
+        return false;
+    }
+
+    private static double ucgenAlanHesapla(double kenar1, double kenar2, double kenar3) {
+        double u = (kenar1 + kenar2 + kenar3) / 2; // Yarı çevre
+        double alan = Math.sqrt(u * (u - kenar1) * (u - kenar2) * (u - kenar3)); // Heron formülü
+        return alan;
     }
 
     private static void dikdortgen(int a, int b) {

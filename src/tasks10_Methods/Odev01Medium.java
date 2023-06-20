@@ -34,7 +34,7 @@ public class Odev01Medium {
 
     private static int randomNum(int max) {
 
-        return (int)(Math.random() * max +1);
+        return (int)(Math.random() * max );
 
     }// 0 (dahil) ile max(dahil degil) arasında bir tamsayı üretir
 

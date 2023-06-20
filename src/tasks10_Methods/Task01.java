@@ -12,15 +12,12 @@ public class Task01 {
         System.out.print("İkinci sayıyı giriniz: ");
         int sayi2 = input.nextInt();
 
-        esitMi(sayi1, sayi2);
+        System.out.println(esitMi(sayi1, sayi2) ? "Sayılar birbirine esit" : "Sayılar birbirine esit degil");
 
 
     }//main sonu
 
-    private static void esitMi(int x, int y) {
-
-        System.out.println((x == y) ? "Sayılar birbirine esit" : "Sayılar birbirine esit degil");
+    private static boolean esitMi(int x, int y) {
+        return (x == y);
     }
-
-
 }

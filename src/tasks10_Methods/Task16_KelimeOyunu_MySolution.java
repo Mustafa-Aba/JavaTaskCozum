@@ -2,7 +2,7 @@ package tasks10_Methods;
 
 import java.util.Scanner;
 
-public class Task16_KelimeOyunu001 {
+public class Task16_KelimeOyunu_MySolution {
     /* Iki kisinin oynayacagi bir kelime oyunu uretelim
      * Kurallar
      * 1- Baslangicta 1.oyuncudan bir kelime girmesini isteyin ve kelimeyi yazdirin

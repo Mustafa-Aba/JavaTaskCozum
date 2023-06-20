@@ -2,7 +2,7 @@ package tasks10_Methods;
 
 import java.util.Scanner;
 
-public class Task15_UcusProject01 {
+public class Task15_UcusProject_MySolution {
 
     /*
     A şehrinden uçmak isteyen bir yolcu B şehrine 500km C şehrine  700km  D şehrine  900 km mesafededir.
