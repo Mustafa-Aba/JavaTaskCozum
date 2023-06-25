@@ -32,9 +32,7 @@ public class Task16_KelimeOyunu_MySolution {
 
     public static void main(String[] args) {
 
-
         menu();
-
     }
     private static void menu() {
         System.out.print(oyuncu + " kelime giriniz: ");
@@ -47,11 +45,11 @@ public class Task16_KelimeOyunu_MySolution {
     }
 
     private static void devam() {
-        System.out.print(oyuncu + "ya soruldu.\nGirilen kelimeyi kabul ediyorsanız: ' E '***Kabul etmiyorsanız ' H '\nGiriş: ");
+        System.out.print(oyuncu + "ya soruldu.\nGirilen kelimeyi kabul ediyorsanız: ' E '\t\t***Kabul etmiyorsanız ' H '\nGiriş: ");
         char tercih = input.next().toUpperCase().charAt(0);
 
         if (tercih == 'E') {
-            cikis();
+            cikisSor();
         } else if (tercih == 'H') {
             System.out.println("Gecersiz kelime");
             //siraBoolean();
@@ -79,8 +77,8 @@ public class Task16_KelimeOyunu_MySolution {
         //siraBoolean();
         siraDegistir();
     }
-    private static void cikis() {
-        System.out.print("Oyuna devam etmek istiyorsanız: 'E'***Devam etmek istemiyorsanız: 'H'\nGiriş: ");
+    private static void cikisSor() {
+        System.out.print("Oyuna devam etmek istiyorsanız: 'E'\t\t***Devam etmek istemiyorsanız: 'H'\nGiriş: ");
         char devam = input.next().toUpperCase().charAt(0);
         if (devam == 'E') {
             kelimeEkle();

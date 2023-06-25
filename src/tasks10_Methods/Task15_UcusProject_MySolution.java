@@ -13,6 +13,7 @@ public class Task15_UcusProject_MySolution {
     65 yasindan buyukse 30% indirim,
     bilet gidis donus alinirrsa 20% indirim uygulayan bir app create ediniz
      */
+
     static Scanner input = new Scanner(System.in);//ortak erişimde
 
     static double toplamUcret = 0;
@@ -21,12 +22,20 @@ public class Task15_UcusProject_MySolution {
 
         islemMenu();
 
+
     }
+
+    private static double toplamUcretucretHesapla(double x,double y) {
+        toplamUcret=x*y;
+        return toplamUcret;
+    }
+
     private static void islemMenu() {
         sehirSecim();
         gidisDonus();
         yasKontrol();
-        biletUcreti();
+        biletUcretiYaz();
+
 
     }
     public static void sehirSecim() {
@@ -38,16 +47,16 @@ public class Task15_UcusProject_MySolution {
 
         switch (tercih) {
             case "B":
-                toplamUcret = 500 * 0.1;
+                toplamUcret = toplamUcretucretHesapla(500,0.1);
                 break;
             case "C":
-                toplamUcret = 700 * 0.1;
+                toplamUcret = toplamUcretucretHesapla(700,0.1);
                 break;
             case "D":
-                toplamUcret = 900 * 0.1;
+                toplamUcret = toplamUcretucretHesapla(900,0.1);
                 break;
             default:
-                System.out.println("Geçersiz Giriş Yaptınız !..");
+                System.out.println("Geçersiz Giriş Yaptınız !.. Tekrar seciniz");
                 sehirSecim();
         }
     }
@@ -55,7 +64,7 @@ public class Task15_UcusProject_MySolution {
         System.out.println("GidisDonus bilet istiyorsanız \"Evet\" yazınız");
         String str = input.nextLine().toUpperCase();
         if (str.contains("EVET")) {
-            toplamUcret *= 0.8 * 2;
+            toplamUcret = toplamUcretucretHesapla(toplamUcret,0.8) * 2;
         }
     }
     private static void yasKontrol() {
@@ -74,7 +83,7 @@ public class Task15_UcusProject_MySolution {
             yasKontrol();
         }
     }
-    private static void biletUcreti() {
+    private static void biletUcretiYaz() {
         System.out.println("toplamUcret = " + toplamUcret + " $");
     }
 }

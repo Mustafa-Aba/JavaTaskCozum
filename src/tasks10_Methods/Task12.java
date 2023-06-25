@@ -33,6 +33,8 @@ public class Task12 {
         System.out.println(mailKontrol(mail));
 
        // mailKontrol2();
+
+
     }
 
     private static boolean mailKontrol(String str) {

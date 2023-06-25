@@ -19,15 +19,24 @@ public class Task08 {
         Scanner input = new Scanner(System.in);
         System.out.println("Yıl giriniz: ");
         int year= input.nextInt();
+
         System.out.println(artikYil(year));
 
 
     }
 
-    private static boolean artikYil(int year) {
-        return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+    public static boolean artikYil(int year) {
+        boolean artikYılMı=true;
+        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+            artikYılMı=true;
+        }else
+            artikYılMı=false;
+        return artikYılMı;
+
         //return (year%4==0 && year%100!=0 ) || (year%100==0 && year%400==0);
     }
+
+
 
 
 }
