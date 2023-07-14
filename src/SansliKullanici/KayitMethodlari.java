@@ -1,4 +1,4 @@
-package SanslıKullanıcı;
+package SansliKullanici;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

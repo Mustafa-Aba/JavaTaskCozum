@@ -1,8 +1,8 @@
-package SanslıKullanıcı;
+package SansliKullanici;
 
 import java.util.Scanner;
 
-import static ch20_Constructor.projeGiris01.KayitMethodlari.kullaniciList;
+import static SansliKullanici.KayitMethodlari.kullaniciList;
 
 public class GirisPaneli {
 
