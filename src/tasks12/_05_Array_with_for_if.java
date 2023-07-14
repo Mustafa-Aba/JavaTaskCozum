@@ -14,11 +14,11 @@ public class _05_Array_with_for_if {
 
         //Kodu aşağıya yazınız.
 
-        int [] numArr={5,6,8,12,14,19};
+        int[] numArr = {5, 6, 8, 12, 14, 19};
 
-        int toplam=0;
+        int toplam = 0;
         for (int i = 0; i < numArr.length; i++) {
-           toplam+= numArr[i]%2==0?numArr[i]:-numArr[i];
+            toplam += numArr[i] % 2 == 0 ? numArr[i] : -numArr[i];
         }
         System.out.println("toplam = " + toplam);
     }

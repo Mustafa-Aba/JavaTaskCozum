@@ -2,6 +2,7 @@ package Tasks13;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class _05_arraylist5 {
 
@@ -16,15 +17,20 @@ public class _05_arraylist5 {
 
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>(Arrays.asList("New jersey" ,"New york" , "Atlanta", "Florida" ,"Ohio"));
+        System.out.println("rotate öncesi list = " + list);
         System.out.println(rotateList(list));
     }
 
     private static ArrayList<String> rotateList(ArrayList<String> list) {
-        ArrayList<String> newList = new ArrayList<String>();
-        for (int i = list.size()-1; i >=0 ; i--) {
-            newList.add(list.get(i));
-        }
-        return newList;
+//        ArrayList<String> newList = new ArrayList<String>();
+//
+//        for (int i = list.size()-1; i >=0 ; i--) {
+//            newList.add(list.get(i));
+//        }
+//        return newList;
+//2.yol
+        Collections.reverse(list);
+        return list;
     }
 
 }

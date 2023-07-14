@@ -7,21 +7,12 @@ public class Task15 {
 
         int carpim=1;
 
-        for (int kat = 0; kat <arrMD.length ; kat++) {
-            for (int daire = 0; daire < arrMD[kat].length ; daire++) {
-                carpim*=arrMD[kat][daire];
+        for (int[] kat : arrMD) {
+            for (int daire : kat) {
+                carpim *= daire;
             }
         }
         System.out.println("carpim = " + carpim);
-
-
-//        for (int i = 0; i <arrMD.length ; i++) {
-//            for (int j = 0; j < arrMD[i].length ; j++) {
-//
-//            }
-//        }
-
-
 
     }
 }

@@ -9,7 +9,7 @@ public class _13_String_methods10 {
 
         //Kodu aşağıya yazınız.
         String str="orange";
-        System.out.println(str.equals("Apple")?"eşit ":"eşit değil");
+        System.out.println(str.equals("Apple") ? "eşit ":"eşit değil");
 
     }
 }

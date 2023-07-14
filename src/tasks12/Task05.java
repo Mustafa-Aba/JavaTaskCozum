@@ -1,6 +1,8 @@
 package tasks12;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Task05 {
@@ -32,8 +34,8 @@ public class Task05 {
         //2. yol
 
         String tersNumber="";
-        String numStr=Integer.toString(num);
-        String [] numArray=numStr.split("");
+        String numStr=Integer.toString(num);//"12345"
+        String [] numArray=numStr.split("");//{1,2,3,4,5}
 
         System.out.println("Arrays.toString(numArray) = " + Arrays.toString(numArray));
 
@@ -44,6 +46,11 @@ public class Task05 {
         //System.out.println("Arrays.toString(tersArray) = " + Arrays.toString(tersArray));
         System.out.println("tersNumber = " + Integer.parseInt(tersNumber));
 
+        //3.yol
+//        ArrayList<String> list = new ArrayList<String>(Arrays.asList(numArray));
+//        System.out.println("list = " + list);
+//        Collections.reverse(list);
+//        System.out.println("Reverselist = " + list);
 
     }
 

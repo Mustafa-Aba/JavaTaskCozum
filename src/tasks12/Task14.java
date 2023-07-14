@@ -16,8 +16,10 @@ public class Task14 {
         Scanner input = new Scanner(System.in);
         System.out.print("İçinde rakam olan bir metin giriniz: ");
         String str=input.nextLine();
+
+        String [] arr=str.split("");//{a,d,e,,,1,4
+
         int toplam=0;
-        String [] arr=str.split("");
 
         for (int i = 0; i < arr.length; i++) {
             if (Character.isDigit(arr[i].charAt(0))) {
@@ -25,7 +27,7 @@ public class Task14 {
             }
         }
         System.out.println("toplam = " + toplam);
-
+        //Character.getNumericValue(arr[0].charAt(0));
 
         //2.yol
         /*

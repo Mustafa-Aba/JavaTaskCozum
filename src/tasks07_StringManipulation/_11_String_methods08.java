@@ -10,8 +10,12 @@ public class _11_String_methods08 {
         //Kodu aşağıya yazınız.
 
         String str="apple";
-        System.out.println(str.contains("app")?"apple içinde \"app\" var. ":false);
+        System.out.println( str.contains("app")  ?   "apple içinde \"app\" var. "    :   false);
 
+        if (str.contains("app") ) {
+            System.out.println("apple içinde \"app\" var. ");
+        }else
+            System.out.println(false);
 
     }
 }

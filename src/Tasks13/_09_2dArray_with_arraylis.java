@@ -25,9 +25,10 @@ public class _09_2dArray_with_arraylis {
 
     private static ArrayList<Integer> changeMultiArraytoOneList(int[][] arr) {
         ArrayList<Integer> arrayList = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                arrayList.add(arr[i][j]);
+
+        for (int[] i : arr) {
+            for (int j : i) {
+                arrayList.add(j);
             }
         }
         return arrayList;

@@ -24,21 +24,26 @@ public class _10_arraylist12 {
 
     public static void main(String[] args) {
         ArrayList<Integer> numlist=new ArrayList<Integer>(Arrays.asList(1 , 5 , 22, 10 ,20 ,14 , 8 , 25 , 30, 28));
+
         Scanner input=new Scanner(System.in);
         System.out.print("Birinci sayıyı giriniz: ");
         int sayi1=input.nextInt();
         System.out.print("İkinci sayıyı giriniz: ");
         int sayi2=input.nextInt();
+
         System.out.println(rangeBtw(numlist, sayi1, sayi2));
     }
 
     private static int rangeBtw(ArrayList<Integer> numlist, int sayi1, int sayi2) {
+        ArrayList<Integer> range = new ArrayList<Integer>();
         int count=0;
-        for (int i = 0; i < numlist.size(); i++) {
-            if (numlist.get(i)>=Math.min(sayi1,sayi2)&&numlist.get(i)<=Math.max(sayi1,sayi2)){
+        for (Integer integer : numlist) {
+            if (integer >= Math.min(sayi1, sayi2) && integer <= Math.max(sayi1, sayi2)) {
+                range.add(integer);
                 count++;
             }
         }
+        System.out.println("range = " + range);
         return count;
     }
 

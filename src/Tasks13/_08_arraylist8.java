@@ -3,6 +3,7 @@ package Tasks13;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Optional;
 
 public class _08_arraylist8 {
@@ -24,12 +25,20 @@ public class _08_arraylist8 {
     }
 
     private static int secondMax(ArrayList<Integer> numList) {
-        int [] numArray= new int[numList.size()];
+//        int [] numArray= new int[numList.size()];
+//
+//        for (int i = 0; i <numList.size() ; i++) {
+//            numArray[i] = numList.get(i);
+//        }
+//        Arrays.sort(numArray);
+//
+//        return numArray[numArray.length-2];
 
-        for (int i = 0; i <numList.size() ; i++) {
-            numArray[i] = numList.get(i);
-        }
-        Arrays.sort(numArray);
-        return numArray[numArray.length-2];
+        //2. yol
+
+        Collections.sort(numList);
+        return numList.get(numList.size()-2);
+
+
     }
 }

@@ -11,7 +11,7 @@ public class Task16 {
 
             carpim*=   MDarr[i][MDarr[i].length - 1];//her dairenin son elemani al
 
-            System.out.println("MDarr[i][MDarr[i].length - 1] = " + MDarr[i][MDarr[i].length - 1]);
+            //System.out.println("MDarr[i][MDarr[i].length - 1] = " + MDarr[i][MDarr[i].length - 1]);
 
         }
         System.out.println("carpim = " + carpim);

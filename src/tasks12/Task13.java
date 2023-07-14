@@ -10,12 +10,14 @@ public class Task13 {
         3 e bolunebilen sayi adedini print eden java code create ediniz (negatif sayilar da dahil olsun)
 
          */
-        int[] numArr = new int[8];
         Scanner input = new Scanner(System.in);
+        int[] numArr = new int[8];
+
         int count = 0;
         for (int i = 0; i < 8; i++) {
             System.out.print(i + ". index elemanını giriniz : ");
             numArr[i] = input.nextInt();
+
             if (numArr[i] % 3 == 0) {
                 count++;
             }

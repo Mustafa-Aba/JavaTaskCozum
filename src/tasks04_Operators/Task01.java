@@ -4,11 +4,11 @@ public class Task01 {
     public static void main(String[] args) {
         int x = 4;
         x++; // 4+1=5
-        x += x; // 5+5= 10
+        x += x; // 5+5= 10//x=x+x;
         --x; // 10-1= 9
         x = 7 + x; // 7+9= 16
-        x *= x; // 16*16= 256
-        x -= 3; // 256-3= 253
+        x *= x; // 16*16= 256//x=x*x
+        x -= 3; // 256-3= 253//x=x-3
 
         System.out.println(" x = " + x);
 

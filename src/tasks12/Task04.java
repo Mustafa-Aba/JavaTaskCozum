@@ -29,7 +29,7 @@ public class Task04 {
                 count++;
             }
         }
-        System.out.println("Ortalmadan buyuk "+ count+" adet sayı vardır.");
+        System.out.println("Ortalamadan buyuk "+ count+" adet sayı vardır.");
 
 
 

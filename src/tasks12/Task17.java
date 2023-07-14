@@ -6,10 +6,11 @@ public class Task17 {
         int[][] sayi ={{1,2,3},{19,-8},{24,10,-41}};//24
 
         int max=sayi[0][0];
-        for (int i = 0; i < sayi.length; i++) {
-            for (int j = 0; j < sayi[i].length; j++) {
-                if (max<sayi[i][j]) {
-                    max=sayi[i][j];
+
+        for (int[] kat : sayi) {
+            for (int daire : kat) {
+                if (max < daire) {
+                    max = daire;
                 }
             }
         }

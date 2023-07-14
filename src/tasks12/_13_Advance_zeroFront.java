@@ -31,7 +31,6 @@ public class _13_Advance_zeroFront {
             if (numArr[i] == 0) {
                 count++;
             }
-
         }
         int[] yeniArr1 = new int[count];
         int[] yeniArr2 = new int[boyut - count];

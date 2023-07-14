@@ -13,30 +13,31 @@ public class Ex07 {
 
 
          */
-        Scanner input= new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.print("Ehliyet var mıdır?(Varsa true yoksa false giriniz: )");
-        boolean isValid=input.nextBoolean();
+        boolean isValid = input.nextBoolean();
+
         System.out.print("Kaç yıl tecrubeniz var: ");
-        int yil=input.nextInt();
+        int yil = input.nextInt();
+
         System.out.print("Toplam aldığınız mesafe kaç km: ");
-        int km=input.nextInt();
+        int km = input.nextInt();
 
         if (isValid) {
-            if (yil>=7) {
-                if (km>=100000) {
+            if (yil >= 7) {
+                if (km >= 100000) {
                     System.out.println("Kontak anahtar sizindir.");
-                }else {
+                } else {
                     System.out.println("Mesafe yeterli degil . 100000 km aşılmalıdır.");
                 }
-            }else{
-                System.out.println( "Tecrube yili yeterli degil. 7 yil tecrube gereklidir.");
+            } else {
+                System.out.println("Tecrube yili yeterli degil. 7 yil tecrube gereklidir.");
             }
 
-        }else{
+        } else {
             System.out.println("Ehliyet olmadan anahtar verilmez.");
 
         }
-
 
 
     }

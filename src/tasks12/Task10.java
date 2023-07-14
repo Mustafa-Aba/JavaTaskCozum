@@ -21,9 +21,9 @@ public class Task10 {
         for (int i = 0; i < boyut ; i++) {
             System.out.println(i+1 +". nci degeri gir");
             numArr[i]=input.nextInt();//boyut kadar kullanicindan deger alinarak arr array inin elemanlari atandi
-            if (numArr[i]!=0) {
-                numArr[i] = - numArr[i] ;// numArr[i]*(-1)
-            }
+
+            numArr[i] = - numArr[i];//numArr[i] *=(-1);
+
         }
         System.out.println("numArr = " + Arrays.toString(numArr));
     }

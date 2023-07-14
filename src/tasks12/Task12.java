@@ -15,20 +15,22 @@ public class Task12 {
 
         Scanner input = new Scanner(System.in);
         System.out.print("kac elemanli array istersin: ");
-        int boyut=input.nextInt();
-        int [] numArr=new int[boyut];
-
-        for (int i = 0; i < boyut ; i++) {
-            System.out.println(i+1 +". nci degeri gir");
-            numArr[i]=input.nextInt();//boyut kadar kullanicindan deger alinarak arr array inin elemanlari atandi
-            numArr[i]*=numArr[i];        }
+        int boyut = input.nextInt();
+        int[] numArr = new int[boyut];
+        int eleman;
+        for (int i = 0; i < boyut; i++) {
+            System.out.println(i + 1 + ". nci degeri gir");
+            eleman = input.nextInt();//boyut kadar kullanicindan deger alinarak arr array inin elemanlari atandi
+            numArr[i] = eleman*eleman;
+        }
         System.out.println("numArr = " + Arrays.toString(numArr));
 
-       // squareArray(numArr);
+        // squareArray(numArr);
     }
+
     private static void squareArray(int[] numArr) {
         for (int i = 0; i < numArr.length; i++) {
-            numArr[i]=(int)Math.pow(numArr[i],2);
+            numArr[i] = (int) Math.pow(numArr[i], 2);
         }
         System.out.println("2. yol squareArray = " + Arrays.toString(numArr));
     }

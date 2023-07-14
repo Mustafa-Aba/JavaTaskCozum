@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class secim {
     static double toplamUcret;
 
-    public static double sehirSec(String sehir) {
+    public static double sehirSec(char sehir) {
 
         switch (sehir) {
-            case "B":
+            case 'B':
                 toplamUcret = ucretHesapla(500, 0.1);
                 break;
-            case "C":
+            case 'C':
                 toplamUcret = ucretHesapla(700, 0.1);
                 break;
-            case "D":
+            case 'D':
                 toplamUcret = ucretHesapla(900, 0.1);
                 break;
             default:

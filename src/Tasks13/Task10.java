@@ -1,6 +1,9 @@
 package Tasks13;
 
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class Task10 {
 
     public static void main(String[] args) {
@@ -11,8 +14,21 @@ public class Task10 {
          * INPUT : {1,2,2,3,1,4,2,5,6,8,7,5,9,1}
          * OUTPUT : [1,2,3,4,5,6,7,8,9]
          */
+        ArrayList<Integer> numList = new ArrayList<>();
+        ArrayList<Integer> newNumList = new ArrayList<>();
 
+        numList = Task08.getUser();
+
+        for (Integer w : numList) {
+            if (!(newNumList.contains(w))) {
+                newNumList.add(w);
+            }
+        }
+        System.out.println("numList = " + numList);
+        System.out.println("newNumList = " + newNumList);
 
     }
 
 }
+
+

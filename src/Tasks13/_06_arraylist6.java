@@ -17,7 +17,7 @@ public class _06_arraylist6 {
      */
 
     public static void main(String[] args) {
-        ArrayList<Integer> numberList = new ArrayList<>(Arrays.asList(5,4,6,2,1));
+        ArrayList<Integer> numberList = new ArrayList<>(Arrays.asList(5, 4, 6, 2, 1));
 
         System.out.println(hillNum(numberList));
 
@@ -25,12 +25,13 @@ public class _06_arraylist6 {
     }
 
     private static int hillNum(ArrayList<Integer> numberList) {
-        int hillNumber=numberList.get(0);
-        for (int i = 1; i < numberList.size(); i++) {
-            if (i!=numberList.size()-1) {
-                if (numberList.get(i) > numberList.get(i + 1) && numberList.get(i) < numberList.get(i - 1)) {
-                    hillNumber = numberList.get(i);
-                }
+
+        int hillNumber = 0;
+        for (int i = 1; i < numberList.size() - 1; i++) {
+
+            if (numberList.get(i) > numberList.get(i + 1) && numberList.get(i) < numberList.get(i - 1)) {
+
+                hillNumber = numberList.get(i);
             }
         }
         return hillNumber;

@@ -16,6 +16,7 @@ public class Task09 {
         Scanner input = new Scanner(System.in);
         System.out.println("inek ve koyun toplam sayısını giriniz: ");
         int dortAyakli = input.nextInt();
+
         System.out.println("Tavuk sayısını giriniz: ");
         int ikiAyakli = input.nextInt();
 

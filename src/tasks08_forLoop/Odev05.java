@@ -11,7 +11,12 @@ public class Odev05 {
         for (int i = 99; i >0 ; i-=2) {
             System.out.print(i+"-");
         }
-
+        System.out.println();
+        for (int i = 100; i >0; i--) {
+            if (i%2==1) {
+                System.out.print(i+"-");
+            }
+        }
 
     }
 }

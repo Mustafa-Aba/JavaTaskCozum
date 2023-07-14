@@ -22,8 +22,8 @@ public class _07_arraylist7 {
      */
 
     public static void main(String[] args) {
-        ArrayList<Integer> arrayList1 = new ArrayList<>(Arrays.asList(8,7,9,6,7));
-        ArrayList<Integer> arrayList2 = new ArrayList<>(Arrays.asList(6,7,12,3,1));
+        ArrayList<Integer> arrayList1 = new ArrayList<>(Arrays.asList(8, 7, 9, 6, 7,6));
+        ArrayList<Integer> arrayList2 = new ArrayList<>(Arrays.asList(6, 7, 12, 3, 1));
 
         System.out.println(common_values(arrayList1, arrayList2));
     }
@@ -31,11 +31,18 @@ public class _07_arraylist7 {
     private static ArrayList<Integer> common_values(ArrayList<Integer> arrayList1, ArrayList<Integer> arrayList2) {
         ArrayList<Integer> common_values = new ArrayList<>();
 
-        for (int i = 0; i < arrayList1.size(); i++) {
-            if (arrayList2.contains(arrayList1.get(i))&&!(common_values.contains(arrayList1.get(i)))) {
-                common_values.add(arrayList1.get(i));
+//        for (int i = 0; i <Math.min(arrayList1.size(),arrayList2.size()) ; i++) {
+//            if (arrayList2.contains(arrayList1.get(i)) && !(common_values.contains(arrayList1.get(i)))) {
+//                common_values.add(arrayList1.get(i));
+//            }
+//        }
+        for (int w : arrayList1) {
+            if (arrayList2.contains(w) ) {
+
+                common_values.add(w);
             }
         }
+
         return common_values;
     }
 

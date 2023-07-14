@@ -25,14 +25,16 @@ public class Task06 {
             numArr[i] = input.nextInt();//boyut kadar kullanicindan deger alinarak arr array inin elemanlari atandi
         }
     }
+
     private static void toSmallerArray(int[] numArr) {
         Arrays.sort(numArr);
         int[] siraliArray = new int[boyut];
         for (int i = boyut - 1; i >= 0; i--) {
             System.out.print(numArr[i] + " ");
-            siraliArray[boyut -1 - i] = numArr[i];
+            siraliArray[boyut - 1 - i] = numArr[i];
             //System.out.println("For içinde siraliArray = " + Arrays.toString(siraliArray));
-        }System.out.println();
+        }
+        System.out.println();
         System.out.println("sort ettikten sonraki numArr = " + Arrays.toString(numArr));
         System.out.println("siraliArray = " + Arrays.toString(siraliArray));
     }

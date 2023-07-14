@@ -21,6 +21,7 @@ public class Task01 {
 
         System.out.println("\"Basari\" gayreti 'sever'\n\n\n\t\"Clarusway ile java cok kolay ...\"");
 
+
     }
 
 

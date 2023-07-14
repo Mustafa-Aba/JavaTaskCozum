@@ -1,5 +1,8 @@
 package Tasks13;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Task07 {
     public static void main(String[] args) {
         /* TASK :
@@ -12,8 +15,14 @@ public class Task07 {
          * OUTPUT : String[] isimler={"Umit","Emin","Furkan","Kerem","Taylan","Orhan","Sinan","Kemal","Ahmet","Ali"};
          */
 
+        ArrayList<String> names = new ArrayList<>(Arrays.asList("Umit", "Emin", "Kemal", "Kerem", "Taylan", "Orhan", "Sinan", "Furkan", "Ahmet", "Ali"));
 
+        String temp=names.get(2);
 
+        names.set(2, names.get(7));
+        names.set(7, temp);
+
+        System.out.println(names);
 
     }
 }

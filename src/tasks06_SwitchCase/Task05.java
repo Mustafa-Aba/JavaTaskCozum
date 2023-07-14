@@ -21,7 +21,7 @@ public class Task05 {
         int not = input.nextInt();
 
         if (not>=0 && not <= 100) {
-            not /= 10;
+            not /= 10;//not=not/10;
 
             switch (not) {
                 case 0:

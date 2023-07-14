@@ -9,9 +9,9 @@ public class Task09 {
 
         Scanner input = new Scanner(System.in);
         int[] numArr = new int[5];
-        for (int i = 0; i < 5; i++) {
-            System.out.print((i + 1) + ". sayıyı giriniz: ");
-            numArr[4-i] = input.nextInt();
+        for (int i = 4; i >=0; i--) {
+            System.out.print((5-i) + ". sayıyı giriniz: ");
+            numArr[i] = input.nextInt();
         }
         System.out.println("numArr = " + Arrays.toString(numArr));
     }

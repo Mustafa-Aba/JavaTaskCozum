@@ -17,6 +17,7 @@ Yaşı 18 den büyük eşit ise ekrana “Kadın” yazdırın.
 		System.out.print("Cinsiyet giriniz: (Erkek icin: 'E' Kadın icin: 'K')");
 		char cinsiyet=input.next().toUpperCase().charAt(0);
 
+
 		System.out.print("Yasınızı giriniz:  ");
 		int yas=input.nextInt();
 
@@ -35,7 +36,8 @@ Yaşı 18 den büyük eşit ise ekrana “Kadın” yazdırın.
             else {
                 System.out.println("Kadın");
             }
-		}
+		}else
+			System.out.println("yanlış giriş yaptınız");
 
 
 		
