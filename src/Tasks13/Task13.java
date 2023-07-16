@@ -29,7 +29,7 @@ public class Task13 {
     private static List<Integer> createNewList(List<Integer> numlist) {
         List<Integer> newList = new ArrayList<>();
         int tekrar = 1;
-        int i = 0, sum = 0;
+        int i = 0, sum ;
         while (i < numlist.size()) {
             sum = 0;
             for (int j = 0; j < tekrar; j++) {
