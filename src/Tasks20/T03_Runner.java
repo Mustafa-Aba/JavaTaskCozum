@@ -1,11 +1,7 @@
-package Task20;
+package Tasks20;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-import static Task20.T03_Student.*;
+import static Tasks20.T03_Student.*;
 
 public class T03_Runner {
     /*
@@ -17,7 +13,8 @@ public class T03_Runner {
                        alamayacagı dersleri print eden code create ediniz
 
      */
-    static ArrayList<T03_Lesson> lessons=new ArrayList<>();
+   // static ArrayList<T03_Lesson> lessons=new ArrayList<>();
+
     public static void main(String[] args) {
 
 
@@ -29,19 +26,27 @@ public class T03_Runner {
         T03_Student student1=new T03_Student(10);
 
 
-        lessons.add(lesson1);
-        lessons.add(lesson2);
-        lessons.add(lesson3);
+        lessonList.add(lesson1);
+        lessonList.add(lesson2);
+        lessonList.add(lesson3);
+
+
 
         System.out.println("*****Dersler*****");
-        System.out.println(lesson1);
-        System.out.println(lesson2);
-        System.out.println(lesson3);
-
+        System.out.println(lessonList);
 
         student1.dersKayit();
+        System.out.println("Toplam Credit 10 dan fazla olamaz. \nDers Kaydı tamamlandı.");
+        System.out.println("Alınan dersleri=\n" + newlessonList);
 
-        System.out.println("student1 = " + student1);
+        System.out.println("Alınamayan dersler= " );
+
+        for (T03_Lesson each: lessonList ) {
+            if(!newlessonList.contains(each)){
+                System.out.println(each);
+            }
+        }
+
 
 
     }

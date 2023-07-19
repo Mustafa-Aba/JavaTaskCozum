@@ -1,48 +1,56 @@
-package Task20;
+package Tasks20;
 
 import java.util.Scanner;
 
 public class T04_Bisiklet {
-    int hiz=10;
-    int vites=1;//1<= vites <=5
+    int hiz = 10;
+    int vites = 1;//1<= vites <=5
 
-    void hizdegistir(int yeniHiz){
-        hiz=yeniHiz;
+    void hizdegistir(int yeniHiz) {
+        hiz = yeniHiz;
     }
-    int vitesArtir(){
+
+    int vitesArtir() {
         return vites++;
     }
-    int vitesAzalt(){
+
+    int vitesAzalt() {
         return vites--;
     }
-    void durumGoster(){
+
+    void durumGoster() {
         System.out.println("hiz = " + hiz);
         System.out.println("vites = " + vites);
     }
-    void dur(){
+
+    void dur() {
         System.out.println("STOP");
     }
-    void islemYap(){
-        System.out.println("***İşlemler Menüsü***");
-        System.out.println("1->DurumGoster\t2->vites azalt\t3->vites artır\t4->hiz degistir\t5->Sürene vur bisiklet dursun");
 
-        Scanner input=new Scanner(System.in);
-        switch (input.nextInt()){
+    void islemYap() {
+        System.out.println("***İşlemler Menüsü***");
+        System.out.println("1->DurumGoster\t2->vites azalt" +
+                "\t3->vites artır\t4->hiz degistir\t5->Sürene vur bisiklet dursun");
+
+        Scanner input = new Scanner(System.in);
+        switch (input.nextInt()) {
             case 1:
                 durumGoster();
                 islemYap();
                 break;
             case 2:
-                if (vites>1) {
+                if (vites > 1) {
                     vitesAzalt();
-                }else
+                    durumGoster();
+                } else
                     System.out.println("vites 1'den düşük olamaz");
                 islemYap();
                 break;
             case 3:
-                if (vites<5) {
+                if (vites < 5) {
                     vitesArtir();
-                }else
+                    durumGoster();
+                } else
                     System.out.println("vites 5'den yüksek olamaz");
                 islemYap();
                 break;

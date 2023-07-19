@@ -1,6 +1,4 @@
-package Task20;
-
-import java.util.Scanner;
+package Tasks20;
 
 public class T02_Runner {
     /*

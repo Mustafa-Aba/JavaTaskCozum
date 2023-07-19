@@ -1,4 +1,4 @@
-package Task20;
+package Tasks20;
 
 public class T04_Runner {
     /*
@@ -11,8 +11,8 @@ public class T04_Runner {
     Trick -> Kullanıcıya metodlarla iligli bir menü veriniz.
      */
     public static void main(String[] args) {
-        T04_Bisiklet bisiklet=new T04_Bisiklet();
 
+        T04_Bisiklet bisiklet=new T04_Bisiklet();
         bisiklet.islemYap();
     }
 

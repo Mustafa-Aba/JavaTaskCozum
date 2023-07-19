@@ -1,6 +1,5 @@
-package Task20;
+package Tasks20;
 
-import java.util.ArrayList;
 
 public class T03_Lesson {
 
@@ -14,9 +13,6 @@ public class T03_Lesson {
 
     public T03_Lesson() {
     }
-
-
-
 
     @Override
     public String toString() {
