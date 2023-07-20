@@ -1,5 +1,7 @@
 package tasks24.task02;
 
+import java.util.Scanner;
+
 public class Main {
 
 /* TODO
@@ -32,6 +34,19 @@ public class Main {
     Main class'ın içinde;
     userName rent is amountOfRent
      */
+public static void main(String[] args) {
+
+    Scanner input =new Scanner(System.in);
+    System.out.print("Enter your name: ");
+    String userName=input.nextLine();
+    System.out.println("Which apartment do you want (0 room,1 room,2 rooms,3 rooms): ");
+    int room= input.nextInt();
+    System.out.println("Would you like to have a balcony in your apartment?\nYes-->(Y)\t****No-->(N)");
+    boolean balconyOrNo= input.next().toUpperCase().charAt(0) == 'Y';
+
+    rentApartments rentApartments=new rentApartments(userName, room,balconyOrNo);
+    System.out.println(rentApartments);
+}
 
 
 }

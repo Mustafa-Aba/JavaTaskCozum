@@ -11,20 +11,84 @@ public class IslemMethodlari {
 
     static ArrayList<Kisi> ogretmenList = new ArrayList<>();
     static ArrayList<Kisi> ogrenciList = new ArrayList<>();
+    static ArrayList<Kisi> kisiList = new ArrayList<>();
 
-    static void ekleme() {
-        System.out.println("***Ekleme Sayfası***");
+    static Kisi kisi = new Kisi();
 
+    static void getUser() {
+
+        adSoyadKontrol();
+        kimlikKontrol();
+        yasKontrol();
+
+    }
+
+    static void adSoyadKontrol() {
         System.out.println(kisiTuru + " nin ismini giriniz:");
         String adSoyad = input.nextLine();
 
+        if (adSoyad.matches("[a-zA-Z\\s]+")) {
+            kisi.setAdSoyad(adSoyad);
+        } else {
+            System.out.println("Bu ad soyad hatalı. Tekrar giriş yapmalısın");
+            adSoyadKontrol();
+        }
 
+    }
+
+    static void kimlikKontrol() {
         System.out.println(kisiTuru + " nin kimlik no giriniz:");
         String kimlikNo = input.next();
+        if (kimlikNo.matches("\\d+") && kimlikNo.length() == 3) {
+            //if (kisi.getKimlikNo()==null) {
+            //    kisi.setKimlikNo(kimlikNo);
+            //}
+            for (Kisi w : ogrenciList) {
+                if (!(kimlikNo.equals(w.getKimlikNo())) ) {
+                    kisi.setKimlikNo(kimlikNo);
+                    break;
+                } else {
+                    System.out.println("Bu kimlik no ile bir kişi sistemde kayıtlıdır. Tekrar giriş yapmalısın");
+                    kimlikKontrol();
+                }
+            }
+            System.out.println(" for sonrası kisi.getKimlikNo() = " + kisi.getKimlikNo());
 
+        } else {
+            System.out.println("Kimlik no hatalı giriş:. Tekrar giriş yapmalısın.");
+            kimlikKontrol();
+        }
 
+    }
+
+    static void yasKontrol() {
         System.out.println(kisiTuru + " nin yas giriniz: ");
         int yas = input.nextInt();
+
+        if (7 <= yas && yas <= 18) {
+            kisi.setYas(yas);
+        } else {
+            System.out.println("yas hatalı giris. Tekrar giriş yapmalısın.");
+            yasKontrol();
+        }
+
+    }
+
+
+    static void ekleme() {
+        System.out.println("***Ekleme Sayfası***");
+        getUser();
+        //System.out.println(kisiTuru + " nin ismini giriniz:");
+        //String adSoyad = input.nextLine();
+
+
+        //System.out.println(kisiTuru + " nin kimlik no giriniz:");
+        //String kimlikNo = input.next();
+
+
+        //System.out.println(kisiTuru + " nin yas giriniz: ");
+        //int yas = input.nextInt();
+
 
         if (kisiTuru.equals("ÖĞRENCİ")) {
 
@@ -37,12 +101,9 @@ public class IslemMethodlari {
             input.nextLine();// dummy: next() ardından input.nextLine() dummy ile önceki satırdaki newline(enter) karakteri temizlenmiştir.
 
 
-            Ogrenci ogrenci = new Ogrenci(adSoyad, kimlikNo, yas, ogrenciNo, sinif);
-            ogrenciList.add(ogrenci);
-
-            System.out.println("ogrenci = " + ogrenci);
+            ogrenciList.add(new Ogrenci(kisi.getAdSoyad(), kisi.getKimlikNo(), kisi.getYas(), ogrenciNo, sinif));
             System.out.println("Kayıt başarıyla yapıldı.");
-            System.out.println("ogrenciList = " + ogrenciList);
+
 
         } else {
             System.out.println(kisiTuru + " nin sicil numarasını giriniz: ");
@@ -52,14 +113,10 @@ public class IslemMethodlari {
             String bolum = input.next();
             input.nextLine();// dummy: next() ardından input.nextLine() dummy ile önceki satırdaki newline(enter) karakteri temizlenmiştir.
 
-            Ogretmen ogretmen = new Ogretmen(adSoyad, kimlikNo, yas, bolum, sicilNo);
-            ogretmenList.add(ogretmen);
-            System.out.println("ogretmen = " + ogretmen);
+            ogretmenList.add(new Ogretmen(kisi.getAdSoyad(), kisi.getKimlikNo(), kisi.getYas(), bolum, sicilNo));
             System.out.println("Kayıt başarıyla yapıldı.");
-            System.out.println("ogretmenList = " + ogretmenList);
         }
     }
-
 
     static void arama() {
         System.out.println("***Arama Sayfası***");
@@ -102,38 +159,50 @@ public class IslemMethodlari {
     static void silme() {
         System.out.println("***Silme Sayfası***");
 
+        boolean flag = false;
+        int index = 0;
+
         if (kisiTuru.equals("ÖĞRENCİ")) {
             if (ogrenciList.isEmpty()) {
                 System.out.println("Öğrenci List boş");
             } else {
-                System.out.println("Aradığınız " + kisiTuru + " nin kimlik no giriniz:");
+                System.out.println("Silmek istediğiniz " + kisiTuru + " nin kimlik no giriniz:");
                 String arananKimlikNo = input.next();
                 input.nextLine();// dummy: next() ardından input.nextLine() dummy ile önceki satırdaki newline(enter) karakteri temizlenmiştir.
 
                 for (Kisi w : ogrenciList) {
                     if (arananKimlikNo.equals(w.getKimlikNo())) {
-                        System.out.println("Aranan öğrenci: " + arananKimlikNo + " kimlik numarasıyla silinmiştir.");
-                        ogrenciList.remove(w);
+                        index = ogrenciList.indexOf(w);
+                        flag = true;
                         break;
-                    } else
-                        System.out.println("Aranan öğrenci: " + arananKimlikNo + " kimlik numarasıyla kayıtlı öğrenci yoktur.");
+                    }
                 }
+                if (flag) {
+                    System.out.println(ogrenciList.get(index).getAdSoyad() + "isimli öğrenci: " + arananKimlikNo + " kimlik numarasıyla silinmiştir.");
+                    ogrenciList.remove(ogrenciList.get(index));
+                } else
+                    System.out.println(arananKimlikNo + " kimlik numarasıyla kayıtlı öğrenci yoktur.");
+
             }
         } else {
             if (ogretmenList.isEmpty()) {
                 System.out.println("Öğretmen List boş");
             } else {
-                System.out.println("Aradığınız " + kisiTuru + " nin kimlik no giriniz:");
+                System.out.println("Silmek istediğiniz " + kisiTuru + " nin kimlik no giriniz:");
                 String arananKimlikNo = input.next();
                 input.nextLine();// dummy: next() ardından input.nextLine() dummy ile önceki satırdaki newline(enter) karakteri temizlenmiştir.
                 for (Kisi w : ogretmenList) {
                     if (arananKimlikNo.equals(w.getKimlikNo())) {
-                        System.out.println("Aranan öğretmen: " + arananKimlikNo + " kimlik numarasıyla silinmiştir.");
-                        ogretmenList.remove(w);
+                        index = ogretmenList.indexOf(w);
+                        flag = true;
                         break;
-                    } else
-                        System.out.println("Aranan öğretmen:  " + arananKimlikNo + " kimlik numarasıyla kayıtlı öğretmen yoktur.");
+                    }
                 }
+                if (flag) {
+                    System.out.println(ogretmenList.get(index).getAdSoyad() + "isimli öğretmen: " + arananKimlikNo + " kimlik numarasıyla silinmiştir.");
+                    ogretmenList.remove(ogretmenList.get(index));
+                } else
+                    System.out.println(arananKimlikNo + " kimlik numarasıyla kayıtlı öğretmen yoktur.");
             }
         }
     }
@@ -144,16 +213,19 @@ public class IslemMethodlari {
         if (kisiTuru.equals("ÖĞRENCİ")) {
             if (!ogrenciList.isEmpty()) {
                 System.out.println("***Öğrenciler***");
-                for (Kisi w:ogrenciList) {
+                for (Kisi w : ogrenciList) {
                     System.out.println(w);
                 }
-            }else
+            } else
                 System.out.println("Sistemde öğrenci bulunmamaktadır.");
 
-        }else if (kisiTuru.equals("ÖĞRETMEN")) {
+        } else if (kisiTuru.equals("ÖĞRETMEN")) {
             if (!ogretmenList.isEmpty()) {
-                System.out.println("ogrenciList = " + ogretmenList);
-            }else
+                System.out.println("***Öğretmenler***");
+                for (Kisi w : ogretmenList) {
+                    System.out.println(w);
+                }
+            } else
                 System.out.println("Sistemde öğretmen bulunmamaktadır.");
         }
     }
@@ -161,6 +233,8 @@ public class IslemMethodlari {
     static void cikis() {
         System.out.println("Çıkış yapıldı");
     }
+
+
 }
 
 
