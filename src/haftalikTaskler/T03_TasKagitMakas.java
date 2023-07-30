@@ -25,7 +25,7 @@ public class T03_TasKagitMakas {//verildi
             System.out.println("2. Oynucu Secimi: \nTas secmek icin 0 \n Makas secmek icin 1 \n Kagit secmek icin 2 \n seciniz.");
 
             int yourGuess = scan.nextInt();
-            ;
+
             System.out.println("1. Oyuncu Tahmini:" + myGuess + "\n" + "2. Oyuncu Tahmini:" + yourGuess);
 
             if (myGuess == yourGuess) {
@@ -42,7 +42,7 @@ public class T03_TasKagitMakas {//verildi
 
         if (numberOfFirstWin == 3) {
             System.out.println("==GAME OVER==");
-            System.out.println("Sizin kazandiniz: " + numberOfFirstWin);
+            System.out.println("Siz kazandiniz: " + numberOfFirstWin);
             System.out.println("Kabettiniz Bilgisayarin kazanma sayisi: " + numberOfComWin);
         } else if (numberOfComWin == 3) {
             System.out.println("==GAME OVER==");

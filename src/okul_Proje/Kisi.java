@@ -1,5 +1,10 @@
 package okul_Proje;
 
+import java.util.ArrayList;
+
+import static okul_Proje.IslemMethodlari.input;
+import static okul_Proje.Islemler.kisiTuru;
+
 //
 public class Kisi {
 
@@ -7,23 +12,28 @@ public class Kisi {
     private String kimlikNo;
     private int yas;
 
+
+
     public Kisi() {
 
     }
 
     public Kisi(String adSoyad, String kimlikNo, int yas) {
-        this.adSoyad=adSoyad;
-        this.kimlikNo=kimlikNo;
-        this.yas=yas;
+        this.adSoyad = adSoyad;
+        this.kimlikNo = kimlikNo;
+        this.yas = yas;
     }
+
 
     public String getAdSoyad() {
         return adSoyad;
     }
 
     public void setAdSoyad(String adSoyad) {
-        this.adSoyad = adSoyad.toUpperCase();
+
+        this.adSoyad = adSoyad;
     }
+
 
     public String getKimlikNo() {
         return kimlikNo;
@@ -38,8 +48,11 @@ public class Kisi {
     }
 
     public void setYas(int yas) {
-            this.yas = yas;
+        this.yas = yas;
     }
+
+
+
 
     @Override
     public String toString() {
